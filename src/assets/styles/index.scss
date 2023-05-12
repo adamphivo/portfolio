@@ -1,0 +1,15 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* Variables */
+:root {
+  --color-background: #111113;
+  --color-text: rgb(238, 233, 233);
+  --color-accent: rgb(211, 108, 49);
+  --font-logo: "Varela Round", sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+}
