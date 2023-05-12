@@ -8,7 +8,7 @@ const Section = styled.section`
   align-items: center;
   background-color: black;
   position: relative;
-  z-index: 1000;
+  z-index: 10000;
 `;
 
 export default function Contact() {
