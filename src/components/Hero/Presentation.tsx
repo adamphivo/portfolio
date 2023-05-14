@@ -8,6 +8,7 @@ const Text = styled.div`
 
 const Name = styled.span`
   color: var(--color-accent);
+  font-family: var(--font-mono);
 `;
 
 export default function Presentation() {

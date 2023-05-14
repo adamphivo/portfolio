@@ -16,7 +16,7 @@ const Icon = styled.div`
   position: absolute;
   bottom: 4rem;
   transition-duration: 1s;
-  transform: scale(0.7);
+  transform: scale(0.6);
   &.invisible {
     opacity: 0;
   }
