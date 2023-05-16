@@ -15,7 +15,7 @@ export default function Presentation() {
   return (
     <>
       <Text>
-        <p>Hello 👋</p>
+        <p>Hi 👋</p>
         <p>
           I'm <Name>Adam</Name>,
         </p>

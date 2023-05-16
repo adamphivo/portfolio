@@ -10,6 +10,9 @@ const Icon = styled.img`
   &:hover {
     filter: grayscale(0%);
   }
+  @media (max-width: 1366px) {
+    height: 50px;
+  }
 `;
 
 const IconsContainer = styled.div`
@@ -25,6 +28,7 @@ const MarqueesContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 100px;
+  width: 100%;
 `;
 
 export default function Marquees() {
