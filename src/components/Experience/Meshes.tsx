@@ -7,7 +7,7 @@ export default function Meshes() {
   const topSphere = useRef<Mesh>(null!);
   const bottomSphere = useRef<Mesh>(null!);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     sphereRef.current.rotation.y += delta;
     bottomSphere.current.rotation.x += delta;
     topSphere.current.rotation.x -= delta;
