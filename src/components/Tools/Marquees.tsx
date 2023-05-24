@@ -5,7 +5,7 @@ import { devIcons, designIcons } from "./Icons";
 const Icon = styled.img`
   height: 75px;
   width: auto;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition: 0.2s;
   &:hover {
     filter: grayscale(0%);

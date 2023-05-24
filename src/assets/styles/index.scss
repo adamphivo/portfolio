@@ -7,6 +7,7 @@
   --color-background: #111113;
   --color-text: rgb(238, 233, 233);
   --color-accent: #94e734;
+  --color-accent-transparent: #93e7349d;
   --font-logo: "Varela Round", sans-serif;
   --font-mono: "Space Mono", monospace;
   // Sizing
@@ -17,4 +18,8 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-logo);
+}
+
+.app {
+  z-index: 1;
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import CTAComponent from "./CTA";
 import InfosComponent from "./Infos";
-import bg from "../../assets/imgs/bg.jpg";
+import Experience from "../Experience/Canvas";
 
 const Section = styled.section`
   height: 100vh;
@@ -11,7 +11,7 @@ const Section = styled.section`
   align-items: center;
   background-color: #0c0c0c;
   position: relative;
-  z-index: 10000;
+  z-index: 2;
   width: 100%;
 `;
 
@@ -61,8 +61,6 @@ const Infos = styled.div`
 
 const Form = styled.div`
   grid-area: 1 / 2 / 3 / 3;
-  background: url(${bg});
-  background-size: cover;
   position: relative;
   @media (max-width: 1366px) {
     display: none;
@@ -79,7 +77,9 @@ export default function Contact() {
         <Infos>
           <InfosComponent></InfosComponent>
         </Infos>
-        <Form></Form>
+        <Form>
+          <Experience />
+        </Form>
       </Grid>
     </Section>
   );

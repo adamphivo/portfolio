@@ -1,38 +1,20 @@
-import { useEffect } from "react";
-import Hero from "./components/Hero/Hero";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Tools from "./components/Tools/Tools";
+import useSmoothScroll from "./hooks/useSmoothScroll";
+import { sections } from "./sections";
 import Grain from "./components/Grain";
-import rolly from "rolly.js";
 
 function App() {
-  useEffect(() => {
-    const view = document.querySelector(".app");
-    const r = rolly({
-      view,
-      native: true,
-      // other options
-    });
-    r.init();
-  }, []);
+  useSmoothScroll();
+
+  const elements = sections.map((item) => (
+    <div data-scene>
+      <slot children={item()}></slot>
+    </div>
+  ));
   return (
     <>
+      <main className="app">{elements}</main>
+      {/* Fixed elements */}
       <Grain />
-      <main className="app">
-        <div data-scene>
-          <Hero />
-        </div>
-        <div data-scene>
-          <Projects />
-        </div>
-        <div data-scene>
-          <Tools />
-        </div>
-        <div data-scene>
-          <Contact />
-        </div>
-      </main>
     </>
   );
 }

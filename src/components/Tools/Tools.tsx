@@ -10,10 +10,9 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-  transition-duration: 0.5s;
-  &.invisible {
-    opacity: 0;
-  }
+  position: relative;
+  z-index: 3;
+  background-color: var(--color-accent);
 
   @media (max-width: 1366px) {
     padding: 1.5rem;
@@ -23,9 +22,14 @@ const Section = styled.section`
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  max-width: var(--site-width);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  &.invisible {
+    opacity: 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -33,6 +37,9 @@ const Title = styled.h2`
   text-align: end;
   font-size: 2.6rem;
   user-select: none;
+  max-width: var(--site-width);
+  margin-bottom: 150px;
+  color: #363333;
   @media (max-width: 1366px) {
     font-size: 1.7rem;
     text-align: center;
@@ -41,7 +48,6 @@ const Title = styled.h2`
 
 const Content = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +55,7 @@ const Content = styled.div`
 `;
 
 const Accent = styled.span`
-  color: var(--color-accent);
+  color: black;
   font-family: var(--font-mono);
 `;
 
@@ -59,10 +65,10 @@ export default function Tools() {
   const isVisible = !!entry?.isIntersecting;
 
   return (
-    <Section ref={element} className={isVisible ? "" : "invisible"}>
-      <Container>
+    <Section ref={element}>
+      <Container className={isVisible ? "" : "invisible"}>
         <Title>
-          <Accent>2.</Accent> Tools of the trade
+          <Accent>II.</Accent> Tools
         </Title>
         <Content>
           <Marquees />
