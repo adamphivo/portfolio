@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useIntersectionObserver } from "usehooks-ts";
 import styled from "styled-components";
 import Marquees from "./Marquees";
 
@@ -27,9 +26,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   transition-duration: 0.5s;
-  &.invisible {
-    opacity: 0;
-  }
 `;
 
 const Title = styled.h2`
@@ -60,13 +56,9 @@ const Accent = styled.span`
 `;
 
 export default function Tools() {
-  const element = useRef<HTMLElement>(null);
-  const entry = useIntersectionObserver(element, { threshold: 0.5 });
-  const isVisible = !!entry?.isIntersecting;
-
   return (
-    <Section ref={element}>
-      <Container className={isVisible ? "" : ""}>
+    <Section>
+      <Container>
         <Title>
           <Accent>II.</Accent> Tools
         </Title>

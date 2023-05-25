@@ -7,7 +7,7 @@ function App() {
   useSmoothScroll();
 
   const elements = sections.map((item, index) => (
-    <div data-scene key={index}>
+    <div data-scene key={index} id={`section-${index}`}>
       <slot children={item()}></slot>
     </div>
   ));
