@@ -37,15 +37,15 @@ export default function Marquees() {
       <MarqueesContainer>
         <Marquee autoFill={true}>
           <IconsContainer>
-            {devIcons.map((icon) => (
-              <Icon src={icon} />
+            {devIcons.map((icon, index) => (
+              <Icon src={icon} key={`top${index}`} />
             ))}
           </IconsContainer>
         </Marquee>
         <Marquee direction="right" autoFill={true}>
           <IconsContainer>
-            {designIcons.map((icon) => (
-              <Icon src={icon} />
+            {designIcons.map((icon, index) => (
+              <Icon src={icon} key={`bot${index}`} />
             ))}
           </IconsContainer>
         </Marquee>

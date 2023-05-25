@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import styled from "styled-components";
 import Content from "./Content";
+import { Fade } from "react-awesome-reveal";
 
 const CanvasContainer = styled.div`
   width: 100dvw;
@@ -13,10 +14,12 @@ const CanvasContainer = styled.div`
 
 export default function Experience() {
   return (
-    <CanvasContainer>
-      <Canvas>
-        <Content />
-      </Canvas>
-    </CanvasContainer>
+    <Fade duration={2000} triggerOnce>
+      <CanvasContainer>
+        <Canvas>
+          <Content />
+        </Canvas>
+      </CanvasContainer>
+    </Fade>
   );
 }
