@@ -1,6 +1,9 @@
 import useSmoothScroll from "./hooks/useSmoothScroll";
 import { sections } from "./sections";
 import Grain from "./components/Grain";
+import Experience from "./components/MainCanvas/Canvas";
+import Loader from "./components/Loader/Loader";
+import { Suspense } from "react";
 
 function App() {
   useSmoothScroll();
@@ -10,10 +13,14 @@ function App() {
       <slot children={item()}></slot>
     </div>
   ));
+
   return (
     <>
-      <main className="app">{elements}</main>
-      {/* Fixed elements */}
+      <Suspense fallback={<Loader />}>
+        <main className="app">{elements}</main>
+        {/* Fixed elements */}
+        <Experience />
+      </Suspense>
       <Grain />
     </>
   );

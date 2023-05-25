@@ -48,7 +48,7 @@ const Section = styled.div`
   background-repeat: repeat;
   background-image: url(${noise});
   animation: ${grain} 7s steps(10) infinite;
-  opacity: 0.1;
+  opacity: 0.2;
 `;
 
 export default function Grain() {

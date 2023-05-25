@@ -8,7 +8,7 @@ export default function Meshes() {
   const bottomSphere = useRef<Mesh>(null!);
 
   useFrame((_, delta) => {
-    sphereRef.current.rotation.y += delta;
+    sphereRef.current.rotation.y += delta * 0.5;
     bottomSphere.current.rotation.x += delta;
     topSphere.current.rotation.x -= delta;
   });
