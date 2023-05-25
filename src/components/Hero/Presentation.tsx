@@ -23,6 +23,7 @@ const Hi = styled.img`
 const HiContainer = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
 `;
 
 export default function Presentation() {

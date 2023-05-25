@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Fade } from "react-awesome-reveal";
 
 const Title = styled.h3`
   font-size: 2.4rem;
@@ -32,10 +33,12 @@ export default function CTAComponent() {
   return (
     <>
       <Container>
-        <Title>
-          Have a <Accent>great</Accent> idea ?
-        </Title>
-        <SubTitle>Tell me about it</SubTitle>
+        <Fade direction="up" cascade>
+          <Title>
+            Have a <Accent>great</Accent> idea ?
+          </Title>
+          <SubTitle>Tell me about it</SubTitle>
+        </Fade>
       </Container>
     </>
   );

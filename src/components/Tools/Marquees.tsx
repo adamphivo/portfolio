@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { devIcons, designIcons } from "./Icons";
 
 const Icon = styled.img`
-  height: 75px;
+  height: 50px;
   width: auto;
   /* filter: grayscale(100%); */
   transition: 0.2s;

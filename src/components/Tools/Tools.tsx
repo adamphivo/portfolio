@@ -66,7 +66,7 @@ export default function Tools() {
 
   return (
     <Section ref={element}>
-      <Container className={isVisible ? "" : "invisible"}>
+      <Container className={isVisible ? "" : ""}>
         <Title>
           <Accent>II.</Accent> Tools
         </Title>
