@@ -37,7 +37,7 @@ const Link = styled.a`
 
 export default function AnimatedLink(props: Props) {
   return (
-    <Link href={props.url} title={props.title}>
+    <Link href={props.url} title={props.title} target="_blank">
       {props.label}
     </Link>
   );
